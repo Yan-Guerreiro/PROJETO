@@ -1,0 +1,203 @@
+/* Conversor de Moedas */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #46a2ff;
+    color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inscreva-se-btn{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 20px;
+}
+
+#inscreva-se-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color:black;
+    transition: 0.5s all;
+}
+
+ul{
+    margin: 30px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 50px;
+    color: #000000
+}
+
+.instrucoes {
+    max-width: 480px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    padding: 0 0.625rem 0.625rem;
+    background: #fff;
+}
+
+.instrucoes p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+#titulo, #dica {
+    background: #111;
+    color: #ffffff;
+    padding: 2px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#titulo {
+    margin-bottom: 0.625rem;
+}
+
+.centro {
+    margin-top: 0.625rem;
+    text-align: center;
+}
+
+label:first-child {
+    font-size: 1.75rem;
+    margin-right: 0.5rem;
+}
+
+.input {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.radio {
+    border: 1px solid #d50000;
+    margin-left: 0.75rem;
+}
+
+.botao {
+    margin-top: 0.625rem;
+    padding: 8px;
+}
+
+#btnConverter, #btnLimpar {
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+#btnLimpar {
+    cursor: pointer;
+    margin-left: 0.625rem;
+    background: #000000;
+}
+
+#btnConverter {
+    cursor: not-allowed;
+}
+
+#btnConverter:hover, #btnLimpar:hover {
+    box-shadow: 0px 0px 15px #0000ff;
+}
+
+/* Paragrafo com ID aviso */
+#aviso {
+    padding: 5px;
+    color: #191919;
+}
+
+#imgMoedas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        /* box-shadow: 0 0 25px #ffc107; */
+        filter: drop-shadow(0 0 25px #0000ff);
+        -webkit-filter: drop-shadow(0 0 25px #0000ff);
+        -moz-filter: drop-shadow(0 0 25px #0000ff);
+        -o-filter: drop-shadow(0 0 25px #0000ff);
+        -ms-filter: drop-shadow(0 0 25px #0000ff);
+    }
+    100% {
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; /* opacidade 0 = 100% transparente */
+    }
+    from {
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+.animar {
+    animation: piscar 1s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
+}
